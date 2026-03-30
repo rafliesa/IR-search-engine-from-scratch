@@ -1,3 +1,26 @@
+import re
+import nltk
+from nltk.stem.snowball import SnowballStemmer
+from nltk.corpus import stopwords
+
+try:
+    stop_words = set(stopwords.words('english'))
+except LookupError:
+    nltk.download('stopwords')
+    stop_words = set(stopwords.words('english'))
+
+stemmer = SnowballStemmer("english")
+
+def preprocess_text(text):
+    """
+    Cleans text (lowercases), removes stopwords, and performs stemming
+    using NLTK's SnowballStemmer.
+    """
+    text = text.lower()
+    tokens = re.findall(r'\b[a-z]+\b', text)
+    stems = [stemmer.stem(t) for t in tokens if t not in stop_words]
+    return stems
+
 class TrieNode:
     """
     A node within the Trie data structure.

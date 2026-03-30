@@ -205,7 +205,7 @@ if __name__ == '__main__':
     doc = ["halo", "semua", "selamat", "pagi", "semua"]
     term_id_map = IdMap()
     assert [term_id_map[term] for term in doc] == [0, 1, 2, 3, 1], "term_id incorrect"
-    assert term_id_map[1] == "semua", "term_id incorrect"
+    assert term_id_map[1] == "seimport sysmua", "term_id incorrect"
     assert term_id_map[0] == "halo", "term_id incorrect"
     assert term_id_map["selamat"] == 2, "term_id incorrect"
     assert term_id_map["pagi"] == 3, "term_id incorrect"

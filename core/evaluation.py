@@ -1,8 +1,6 @@
 import re
 import math
-import sys
-from base_index import BaseIndex
-from my_compression import StandardPostings, VBEPostings, EliasGammaPostings
+from core.base_index import BaseIndex
 
 ######## >>>>> IR metric: RBP p = 0.8
 

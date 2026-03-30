@@ -4,10 +4,13 @@ import contextlib
 import heapq
 from bisect import bisect_left
 import math
-import my_compression
-
-from index import InvertedIndexReader, InvertedIndexWriter
-from util import IdMap, sorted_merge_posts_and_tfs
+from core import my_compression
+from core.index import InvertedIndexReader, InvertedIndexWriter
+from core.util import IdMap, sorted_merge_posts_and_tfs
+import sys
+sys.modules['util'] = sys.modules['core.util']
+sys.modules['my_compression'] = sys.modules['core.my_compression']
+sys.modules['index'] = sys.modules['core.index']
 import re
 
 import nltk

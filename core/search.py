@@ -1,4 +1,4 @@
-from base_index import BaseIndex
+from core.base_index import BaseIndex
 
 searcher = BaseIndex(data_dir = 'collection', \
                      postings_encoding = None, \

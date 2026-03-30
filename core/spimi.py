@@ -1,8 +1,8 @@
 import os
 
-from index import InvertedIndexWriter
-from base_index import BaseIndex, preprocess_text
-from my_compression import StandardPostings, VBEPostings, EliasGammaPostings
+from core.index import InvertedIndexWriter
+from core.base_index import BaseIndex, preprocess_text
+from core.my_compression import StandardPostings, VBEPostings, EliasGammaPostings
 from tqdm import tqdm
 import sys
 
